@@ -1,0 +1,40 @@
+<div class="container">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <h3>Images</h3>
+  <div *ngIf="images" class="row">
+    <div class="col-md-4" *ngFor="let image of images; let i = index">
+      <div class="card mb-3">
+        <p class="card-text text-dark" style="font-weight: bold; text-align: center; margin-top: 40px;">{{ image.comment }}</p>
+        <img [src]="image.imageUrl" alt="Image" class="card-img-top">
+        <div class="card-body">
+          <!-- Image Comment -->
+
+          <!-- Buttons with custom gap -->
+          <div class="mt-3 d-flex justify-content-center">
+            <button class="btn btn-danger mr-2" (click)="deleteImageAndComment(image.id, i)">
+              <i class="fa fa-trash" style="font-size:24px"></i>
+            </button>
+
+            <button class="btn btn-danger mr-2" (click)="editImage(image.id)">
+              <i class="fa fa-edit" style="font-size:24px"></i>
+            </button>
+
+            <button class="btn btn-danger" (click)="downloadFile(image.GoogleDriveFileId)">
+             <i class="fa fa-download" style="font-size:24px"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .mt-3 {
+    margin-top: 0.2cm; /* 1cm gap between rows */
+  }
+
+  .mr-2 {
+    margin-right: 0.2cm; /* 1cm gap between buttons */
+  }
+</style>

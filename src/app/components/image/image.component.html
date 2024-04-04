@@ -1,0 +1,33 @@
+<div style="width: 40%">
+  <form [formGroup]="frm" (ngSubmit)="onSubmit()">
+    <h3>Add Image</h3>
+    <div class="mb-3">
+      <label for="UserName" class="form-label">UserName *</label>
+      <input type="text" class="form-control" formControlName="UserName">
+      <div *ngIf="frm.get('UserName')?.touched && frm.get('UserName')?.invalid">
+        <div *ngIf="frm.get('UserName')?.errors?.['required']" class="text-danger">UserName is required</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="comment" class="form-label">comment *</label>
+      <input type="text" class="form-control" formControlName="comment">
+      <div *ngIf="frm.get('comment')?.touched && frm.get('comment')?.invalid">
+        <div *ngIf="frm.get('comment')?.errors?.['required']" class="text-danger">comment is required</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="file" class="form-label">Choose file *</label>
+      <input type="file" (change)="onChange($event)" formControlName="file">
+      <div *ngIf="frm.get('file')?.touched && frm.get('file')?.invalid">
+        <div *ngIf="frm.get('file')?.errors?.['required']" class="text-danger">File is required</div>
+      </div>
+    </div>
+    <div class="mb-3 form-check" *ngIf="status">
+      {{status.message}}
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="frm.invalid">Submit</button>
+    
+  </form>
+  
+</div>
+

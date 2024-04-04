@@ -1,0 +1,14 @@
+.full-width-container {
+    width: 100%;
+  }
+  
+  .full-width-textarea {
+    width: calc(100% - 20px); /* Adjust according to your needs */
+    /* Add any other styles you need */
+  }
+  
+  .full-width-button {
+    width: calc(100% - 20px); /* Adjust according to your needs */
+    /* Add any other styles you need */
+  }
+  

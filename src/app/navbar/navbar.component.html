@@ -1,0 +1,35 @@
+
+<nav class="navbar navbar-expand-lg bg-light" style="background: linear-gradient(to right, #FF5733, #FFC300);">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" style="width: 50px;" alt="logo">
+        We are The Leuwint Team
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/add-image">Add Image</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/add-video">Add Video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/display-image">Display Image</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" (click)="navigateToLogin()">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
